@@ -3,26 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Otherflix offers DRM free content for your entertainment needs. Enjoy a wide variety of videos without any restrictions.">
-  <meta name="keywords" content="Otherflix, DRM free, videos, entertainment, unrestricted content">
   <title>OTHERFLIX - DRM FREE CONTENTS: FEEL FREE ENJOY</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oxygen'>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./style.css">
+  <meta itemprop="thumbnailUrl" content="https://www.otherflix.net/video-thumbnail.jpg">
 </head>
 <body>
-  <div class="video-container">
-    <video id="vid" autoplay loop="true" width="100%" height="100%" muted>
-      <source type="video/mp4" src="video.mp4">
-    </video>
-    <script>
-      document.getElementById('vid').play();
-    </script>
-    <div class="overlay">
-      <h1>Bored DRM contents?</h1>
-      <p>Need a free website for the weekend? <strong>Enjoy!</strong></p>
+  <main>
+    <div class="video-container">
+      <video autoplay loop="true" width="1920" height="1080" muted>
+        <source type="video/mp4" src="video.mp4">
+      </video>
+      <div class="overlay">
+        <h2>Bored of DRM contents?</h2>
+        <p>Need a free website for the weekend? <strong>Enjoy!</strong></p>
+      </div>
     </div>
-  </div>
+  </main>
+  <footer class="footer">
+    <p id="copyright">&copy; Otherflix. All rights reserved.</p>
+  </footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' async></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentYear = new Date().getFullYear();
+      document.getElementById("copyright").innerHTML = "&copy; " + currentYear + " Otherflix. All rights reserved.";
+    });
+  </script>
 </body>
 </html>
